@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="app"></div>
+    <button id="support-fab" aria-label="Contact support">Contact Support</button>
+
+    <div id="support-drawer" class="drawer" aria-hidden="true" role="dialog" aria-labelledby="support-title">
+      <div class="drawer-header">
+        <h2 id="support-title">Contact Support</h2>
+        <button id="close-support" aria-label="Close support panel">✕</button>
+      </div>
+      <p>Need help? This is a prototype support panel.</p>
+      <form id="support-form">
+        <label for="support-topic">Topic</label>
+        <select id="support-topic">
+          <option>Analysis question</option>
+          <option>Training module issue</option>
+          <option>Account access</option>
+        </select>
+        <label for="support-message">Message</label>
+        <textarea id="support-message" rows="4" placeholder="Tell us what you need..."></textarea>
+        <button type="submit" class="btn primary">Send (Mock)</button>
+      </form>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
